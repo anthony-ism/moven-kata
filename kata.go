@@ -15,6 +15,9 @@ func HasUniqueCharacters(s string) bool {
 
 func IsAnagram(s1 string, s2 string) bool {
 	m := make(map[string]int)
+	if (len(s1) != len(s2)) {
+		return false;
+	}
 	for _, r := range s1 {
 		c := string(r)
 		if m[c] > 0 {
