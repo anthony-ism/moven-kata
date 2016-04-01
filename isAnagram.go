@@ -2,19 +2,6 @@ package kata
 
 import "strings"
 
-func HasUniqueCharacters(s string) bool {
-	set := make(map[string]bool)
-	for _, r := range s {
-		c := string(r)
-		if set[c] {
-			return false
-		} else {
-			set[c] = true
-		}
-	}
-	return true;
-}
-
 func IsAnagram(s1 string, s2 string) bool {
 	s1 = strings.Trim(s1, " ");
 	s2 = strings.Trim(s2, " ");
