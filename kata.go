@@ -1,5 +1,7 @@
 package kata
 
+import "strings"
+
 func HasUniqueCharacters(s string) bool {
 	set := make(map[string]bool)
 	for _, r := range s {
@@ -14,10 +16,13 @@ func HasUniqueCharacters(s string) bool {
 }
 
 func IsAnagram(s1 string, s2 string) bool {
-	m := make(map[string]int)
+	s1 = strings.Trim(s1, " ");
+	s2 = strings.Trim(s2, " ");
 	if (len(s1) != len(s2)) {
 		return false;
 	}
+	m := make(map[string]int)
+
 	for _, r := range s1 {
 		c := string(r)
 		if m[c] > 0 {

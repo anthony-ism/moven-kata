@@ -13,6 +13,7 @@ func TestIsAnagram(t *testing.T) {
 		{"", "", true},
 		{"1", "1", true},
 		{"1", "1as", false},
+		{" 1", "1 ", true},
 	}
 	for _, c := range cases {
 		got := IsAnagram(c.s1, c.s2)
