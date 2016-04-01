@@ -18,7 +18,7 @@ func IsAnagram(s1 string, s2 string) bool {
 	for _, r := range s1 {
 		c := string(r)
 		if m[c] > 0 {
-			m[c] = m[c] + 1
+			m[c]++
 		} else {
 			m[c] = 1
 		}
@@ -27,7 +27,7 @@ func IsAnagram(s1 string, s2 string) bool {
 	for _, r := range s2 {
 		c := string(r)
 		if m[c] > 0 {
-			m[c] = m[c] - 1
+			m[c]--
 		} else {
 			m[c] = 1
 		}
